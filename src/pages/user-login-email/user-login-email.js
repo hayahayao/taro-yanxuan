@@ -1,3 +1,6 @@
+// 📒 有 state 并且 connect 了 redux
+// 📒 也就是容器组件
+
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
 import md5 from 'blueimp-md5'

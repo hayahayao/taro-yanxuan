@@ -22,6 +22,7 @@ class Cate extends Component {
   }
 
   componentDidMount() {
+    // 📒 mount 的时候 dispatch 一次，拿到 menu 和 category
     this.props.dispatchMenu().then((res) => {
       this.setState({
         loaded: true,

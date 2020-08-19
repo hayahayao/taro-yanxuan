@@ -10,7 +10,7 @@ import Policy from './policy'
 import Pin from './pin'
 import Operation from './operation'
 import Manufactory from './manufactory'
-import FlashSale from './flash-sale'
+import FlashSale from './flash-sale' // 📒 只有这个是有状态的组件（维护了一个用于倒计时计数的状态），其他都是函数组件
 import Popular from './popular'
 import Category from './category'
 import Recommend from './recommend'
@@ -19,7 +19,7 @@ import './home.scss'
 
 const RECOMMEND_SIZE = 20
 
-@connect(state => state.home, { ...actions, dispatchCartNum })
+@connect(state => state.home, { ...actions, dispatchCartNum }) // 📒 扩展了一下 home 的 actions
 class Home extends Component {
   config = {
     navigationBarTitleText: '网易严选'
@@ -40,6 +40,7 @@ class Home extends Component {
       duration: 6000
     })
 
+    // 📒 mount 时候一堆 dispatch fetch 请求数据
     this.props.dispatchHome().then(() => {
       this.setState({ loaded: true })
     })
@@ -84,7 +85,7 @@ class Home extends Component {
       return <Loading />
     }
 
-    const { homeInfo, searchCount, recommend, pin } = this.props
+    const { homeInfo, searchCount, recommend, pin } = this.props // 📒 来自中心 store 的很多数据！
     return (
       <View className='home'>
         <View className='home__search'>

@@ -20,7 +20,7 @@ class CateSub extends Component {
       loaded: false,
       loading: {}
     }
-    this.subId = parseInt(this.$router.params.subId)
+    this.subId = parseInt(this.$router.params.subId) // 📒 在这里获取路由跳转带来的参数
     this.categoryId = parseInt(this.$router.params.categoryId)
   }
 

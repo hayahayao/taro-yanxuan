@@ -1,3 +1,5 @@
+// 📒 函数组件！
+
 import Taro, { Component } from '@tarojs/taro'
 import { View, Image, Input } from '@tarojs/components'
 import iconClose from './assets/clear.png'

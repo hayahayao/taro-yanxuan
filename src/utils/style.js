@@ -34,6 +34,8 @@ export function getWindowHeight(showTabBar = true) {
  * 例如加 prefix，或者对 RN 样式的兼容，又或是在此处统一处理 Taro.pxTransform
  * 此处只做演示，若需要做完善点，可以考虑借助 https://github.com/postcss/postcss-js
  */
+// 📒 样式在编译时已经通过 postcss 进行处理了
+// 📒 此处单独处理 js 中加入的 style
 export function postcss(style) {
   if (!style) {
     return style

@@ -16,6 +16,7 @@ export default class ButtonItem extends Component {
     onGetUserInfo: () => {}
   }
 
+  // 📒 自动生成一些 BEM class name
   getCls = (base) => {
     const { type, plain, disabled } = this.props
     return classNames(
