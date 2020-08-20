@@ -4,6 +4,7 @@ import { CheckboxItem, InputNumber } from '@components'
 import './index.scss'
 
 export default class List extends Component {
+  // 📒 defaultProps：为 props 指定默认值，避免 props 尚未赋值时为 null
   static defaultProps = {
     list: [],
     onUpdate: () => {},
@@ -50,6 +51,8 @@ export default class List extends Component {
           >
             <CheckboxItem
               checked={item.checked}
+              // 📒 感觉这地方不用写 bind...都箭头函数了 bind this 干啥
+              // 📒 看到有说箭头函数会影响性能的...还没明白
               onClick={this.handleUpdateCheck.bind(this, item)}
             />
             <Image

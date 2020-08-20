@@ -4,6 +4,7 @@ import { connect } from '@tarojs/redux'
 import * as actions from '@actions/user'
 import { dispatchCartNum } from '@actions/cart'
 import { getWindowHeight } from '@utils/style'
+// 📒 啥都拆分成组件真滴不错，比公司项目一个页面所有东西都在一起好多了（而且搭配 redux 传值无压力）
 import Profile from './profile'
 import Menu from './menu'
 import Activity from './activity'

@@ -1,3 +1,8 @@
+// 📒 一点最佳实践：
+// 📒 每份数据有且只被一个 component/store 管理
+// 📒 完全受控组件：组件的数据完全来自于父组件，组件自己没有 state
+// 📒 完全不受控组件：组件的数据完全由自己管理，传入的 props 只用来设置初始值
+
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Image, ScrollView } from '@tarojs/components'
 import { Loading } from '@components'

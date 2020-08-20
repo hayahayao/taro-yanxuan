@@ -5,6 +5,7 @@
 
 // 📒 所有的 api 请求均在 dispatch -> action(createAction 生成) 中发出
 // 📒 这个 createAction 在 dispatch 前做了 fetch
+// 📒 也就是说组件渲染所需的业务数据们都是通过 dispatch 获取到 store 的，组件自己只负责维护自己的一些 loading 之类的状态变量
 
 import fetch from './request'
 

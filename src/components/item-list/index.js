@@ -1,3 +1,5 @@
+// 📒 在 cart 和 cate-sub 中都用到了
+
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
 import { Tag } from '@components'

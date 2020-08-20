@@ -25,6 +25,9 @@ class Index extends Component {
   }
 
   componentDidShow() {
+    // 📒 在这里单独 fetch 了一下
+    // 📒 因为购物车这页需要登录后才能查看所以要先检查，其他页面无此限制
+    // 📒 而如果需要检查状态的接口较多时肯定是直接在 fetch 层判断返回结果更合适
     fetch({ url: API_CHECK_LOGIN, showToast: false, autoLogin: false }).then((res) => {
       if (res) {
         this.setState({ loaded: true, login: true })
